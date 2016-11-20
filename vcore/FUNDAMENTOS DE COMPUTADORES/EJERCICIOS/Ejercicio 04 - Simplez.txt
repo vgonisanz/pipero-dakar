@@ -1,0 +1,71 @@
+Ejercicio 04 - Simplez
+
+Tenemos 3 arrays de 100 números cada uno
+Vamos a leer por teclado números. El primer número va a primer array.
+El segundo número va al segundo array. Y luego hacemos la multiplicación
+de esos dos números y lo guardamos en el tercer array.
+Así lo haremos sucesivamente hasta completar los 100 números.
+
+Array 1 - Posición 200
+Array 2 - Posicion 300
+Array 3 - Posicion 400
+Contador - Posicion 500 - Valor 100
+
+109 -  Parametro 1
+110 -  Parametro 2
+111 -  Resultado función de multiplicación
+112 -  Contador
+113 -  Auxiliar
+
+
+Programa
+00 - LD /510
+01 - BZ #0
+02 - LD /511
+03 - ST /299
+04 - ST /109
+05 - LD /510
+06 - BZ #4
+07 - LD /511
+08 - ST /399
+09 - ST /110
+10 - BR #50
+11 - LD /111
+12 - ST /499
+13 - LD /3
+14 - DEC
+15 - ST /3
+16 - LD /8
+17 - DEC
+18 - ST /8
+19 - LD /12
+20 - DEC
+21 - ST /12
+22 - LD /500
+23 - BZ #27
+24 - DEC
+25 - ST /500
+26 - BR #0
+27 - HALT
+
+
+Función de multiplicación
+50 - LD /110
+51 - BZ #64
+52 - ST /112
+53 - CLR
+54 - ST /113
+53 - LD /113
+54 - ADD /109
+55 - ST /113
+56 - LD /112
+57 - DEC
+58 - BZ #61
+59 - ST /112
+60 - BR #53
+61 - LD /113
+62 - ST /111
+63 - BR #66
+64 - CLR
+65 - ST /111
+66 - BR #11

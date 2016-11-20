@@ -1,0 +1,34 @@
+Ejercicio 05 - Simplez + i4
+
+Invertir un array de 200 elementos que lo tenemos guardado en la posición 2000
+de memoria
+
+30 - 0 (Posición izquierda del array)
+31 - 199 (Posición derecha del array)
+32 - 99 (Contador)
+33 - 2000
+34 - Temporal
+35 - 1
+
+00 - LD .X,30
+01 - LD .A,[33][.X]
+02 - ST .A,34
+03 - LD .X,31
+04 - LD .A,[33][.X]
+05 - LD .X,30
+06 - ST .A,[33][.X]
+07 - LD .A,34
+08 - LD .X,31
+09 - ST .A,[33][.X]
+10 - LD .A,30
+11 - ADD .A,35
+12 - ST .A,30
+13 - LD .A,31
+14 - SUB .A,#1
+15 - ST .A,31
+16 - LD .A,32
+17 - BZ 21
+18 - SUB .A,#1
+19 - ST .A,32
+20 - BR 0
+21 - HALT

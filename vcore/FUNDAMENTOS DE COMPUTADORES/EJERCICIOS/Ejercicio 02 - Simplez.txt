@@ -1,0 +1,75 @@
+Ejercicio 02 - Simplez
+
+Tenemos la siguiente representación de memoria
+
+100 -  20
+101 -  10
+102 -  Resultado 1
+103 -  25
+104 -  30
+105 -  Resultado 2
+106 -  12
+107 -  8
+108 -  Resultado 3
+109 -  Parametro 1
+110 -  Parametro 2
+111 -  Resultado función de multiplicación
+112 -  Contador
+113 -  Auxiliar
+
+
+Programa
+00 - BR #4
+01 - BR #11
+02 - BR #20
+03 - BR #29
+04 - LD /100
+05 - ST /109
+06 - LD /101
+07 - ST /110
+08 - LD /1
+09 - ST /66
+10 - BR #50
+11 - LD /111
+12 - ST /102
+13 - LD /103
+14 - ST /109
+15 - LD /104
+16 - ST /110
+17 - LD /2
+18 - ST /66
+19 - BR #50
+20 - LD /111
+21 - ST /105
+22 - LD /106
+23 - ST /109
+24 - LD /107
+25 - ST /110
+26 - LD /3
+27 - ST /66
+28 - BR #50
+29 - LD /111
+30 - ST /108
+31 - HALT
+
+
+Función de multiplicación
+50 - LD /110
+51 - BZ #64
+52 - ST /112
+53 - CLR
+54 - ST /113
+53 - LD /113
+54 - ADD /109
+55 - ST /113
+56 - LD /112
+57 - DEC
+58 - BZ #61
+59 - ST /112
+60 - BR #53
+61 - LD /113
+62 - ST /111
+63 - BR #66
+64 - CLR
+65 - ST /111
+66 - BR #0

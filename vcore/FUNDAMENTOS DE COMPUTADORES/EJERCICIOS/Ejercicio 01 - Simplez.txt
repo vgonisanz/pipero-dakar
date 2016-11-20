@@ -1,0 +1,26 @@
+Ejercicio 01 - Simplez
+
+Realizar la suma de dos arrays de 50 números sobre un tercero.
+El array A empieza en la dirección 50
+El array B empieza en la dirección 100
+El array C empieza en la dirección 150
+Utilizamos un contador con el valor 49 que está en la posición 200
+
+00 - LD /99
+01 - ADD /149
+02 - ST /199
+03 - LD /0
+04 - DEC
+05 - ST /0
+06 - LD /1
+07 - DEC
+08 - ST /1
+09 - LD /2
+10 - DEC
+11 - ST /2
+12 - LD /200
+13 - BZ #17
+14 - DEC
+15 - ST /200
+16 - BR #0
+17 - HALT

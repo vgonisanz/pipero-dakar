@@ -1,0 +1,24 @@
+Ejercicio 03 - Simplez
+
+Vamos a leer de teclado utilizando el método de la espera activa.
+Con los números que leamos vamos a rellenar un array de 100 números
+
+Comienzo del array en la dirección 100
+
+Posiciones de memoria
+
+50 - 100
+
+00 - LD /510
+01 - BZ #0
+02 - LD /511
+03 - ST /199
+04 - LD /3
+05 - DEC
+06 - ST /3
+07 - LD /50
+08 - BZ #12
+09 - DEC
+10 - ST /50
+11 - BR #0
+12 - HALT
